@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-primary-color: #092d38;
+    --ff-scondary-color: #06181c;
+    --button-color: #065e7c;
+    --text-color: #E1E1E6;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: black;
+    color: var(--text-color);
+}
+
+
+
+body * {
+    font-family: var(--ff-primary);
+}
+
+/*Classe usada para esconder um texto dentro da página, porém a acessibilidade faz a leitura dele*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+#app {
+    
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1120px;
+}
+
+#app header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#app header .logo {
+    width: 18.6rem;
+    height: 3.2rem;
+}
+
+#app header input {
+    padding-left: 2rem;
+    background-color: var(--ff-scondary-color);
+    width: 46.2rem;
+    height: 4.6rem;
+    border-radius: 4px;
+    color: var(--text-color);
+    border: none;
+}
+
+#app header button {
+    display: flex;
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    color: var(--text-color);
+    font-weight: bold;
+    background-color: var(--button-color);
+    width: 17rem;
+    height: 4.8rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+
+
+/*ORGANIZAÇÃO DA TABELA*/
+
+table * {
+    font-size: 1.4rem;
+    color: var(--text-color);
+   
+}
+
+/*Collapse tira o espaçamento entre as tabelas - 
+Box shadow sombreamendo mexendo nos eixos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8rem;
+}
+
+
+table th {
+    background-color: var(--ff-primary-color);
+    text-align: left;
+    height: 4.4rem;
+    width: 21rem;
+    font-weight: normal;
+    padding-left: 5rem;
+}
+
+table th:first-child {
+    border-top-left-radius: .4rem;
+    
+    width: 50rem;
+}
+
+table th:last-child {
+    border-top-right-radius: .4rem;
+}
+
+
+/*Todas as colunas ímpares*/
+table tr:nth-child(odd) {
+    background: #06161B;
+}
+
+/*Todas colunas pares*/
+table tr:nth-child(even) {
+    background: #182a2e;
+}
+
+
+table td {
+    
+    padding-left: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: left;
+}
+
+table td.repositories,
+table td.followers {
+   padding-left: 5rem;
+    margin-left: 4rem;
+    text-align: justify;
+}
+
+ td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem ;
+}
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user span {
+    opacity: .5;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td .remove {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-weight:200;
+    opacity: .99;
+    padding-left: 1rem;
+}
